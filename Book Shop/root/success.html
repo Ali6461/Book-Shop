@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="images/logo.jpg" alt="Logo">
+        </div>
+        <h1>My Bookshop</h1>
+        
+        <nav>
+            <ul class="navigation">
+              
+              <li><a href="index.html">Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Contact Us</a></li>
+              
+            </ul>
+          </nav>
+          <div class="burger-icon">
+            <img src="images/burger.svg.png" alt="nav bar">
+          </div>
+      </header>
+      <h2 class="payment">
+        Payment Options
+      </h2>
+      <hr style="width: 90%">
+      
+        <!-- column 1 -->
+        <div class="cardcontainer">
+            <div class="cardtext">
+              <strong>Debit / Credit Card</strong>
+            </div>
+            <div class="cardimg">
+                <img src="images/cards.jpg" alt="We accept, Visa, American Express, Discover Network & Mastercard" class="cards">
+            </div>
+          </div>
+          <script src="javascript/CardValidation.js"></script>
+
+          <!-- update this output placeholder -->
+          <h1 class = "thankyou">Thank You!</h1>
+
+          <p id="output">Placeholder</p>
+
+          <div class = "num">
+            <script>
+               //get the URL parameters
+               const urlParams = new URLSearchParams(window.location.search);
+                //get the cardNumber parameter from the URL and decode it
+                const encodedCardNumber = urlParams.get('cardNumber');
+                const cardNumber = decodeURIComponent(encodedCardNumber);
+                //update the paragraph with the masked card number
+                const maskedCardNumber = "Your credit card number ends in **** **** **** " + cardNumber.slice(-4);
+                document.getElementById("output").innerText = maskedCardNumber;
+            </script>
+          </div>
+          
+          
+
+
+
+          <script src="javascript/Navbar.js"></script>
+          
+          
+  </body>
+</html>

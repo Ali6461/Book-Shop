@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="images/logo.jpg" alt="Logo">
+        </div>
+        <h1>My Bookshop</h1>
+        
+        <nav>
+            <ul class="navigation">
+              
+              <li><a href="index.html">Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Contact Us</a></li>
+              
+            </ul>
+          </nav>
+          <div class="burger-icon">
+            <img src="images/burger.svg.png" alt="nav bar">
+          </div>
+      </header>
+      <h2 class="payment">
+        Payment Options
+      </h2>
+      <hr style="width: 90%">
+      
+        <!-- column 1 -->
+        <div class="cardcontainer">
+            <div class="cardtext">
+              <strong>Debit / Credit Card</strong>
+            </div>
+            <div class="cardimg">
+                <img src="images/cards.jpg" alt="We accept, Visa, American Express, Discover Network & Mastercard" class="cards">
+            </div>
+          </div>
+          <!-- This part is the creation of the form for the mastercard -->
+          <form class="payment-form">          
+            <label for="card-number">Card Number</label>
+            <!-- input for mastercard 16 digit number, placeholder has been used with a max length set to 16 so user can not put less -->
+            <input type="text" id="card_number" name="card-numberN" maxlength="16" placeholder="XXXX XXXX XXXX XXXX"></input>
+
+            <label for="expiration-date">Expiration Date</label>
+            <!-- drop down menu for all the months in a year -->
+            <div style="display: flex;">
+              <select type="text" id="expiration_month" name="expiration-monthN">
+                <option disabled hidden selected>Select Month</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+
+              <label for="expiration_month" style="padding: 5px;"> / </label>
+
+                <!-- drop down menu for all the years -->
+                <select type="text" id="expiration_year" name="expiration-yearN" placeholder="YYYY"> 
+                  <option disabled hidden selected>Select Year</option>
+                  <option value="2024" >2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                </select>             
+            </div>
+
+            <label for="security-code">Security Code</label>
+            <input type="text" id="security_code" name="security-codeN" maxlength="4" placeholder="CVV">
+            <p></p> 
+            <p class="info">(3-4 digit code normally on the back of your card)</p>
+            
+            
+              
+            
+            
+          </form>
+          <!-- submit button linking to javascript validate form -->
+          <button  id="submit" onclick="validate()">Continue</button>
+          
+          
+        
+      
+      
+         
+
+          
+
+
+
+
+      <script src="javascript/Navbar.js"></script>
+      <script src="javascript/CardValidation.js"></script>
+      
+</body>
+</html>
